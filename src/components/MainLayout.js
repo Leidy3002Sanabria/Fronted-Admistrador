@@ -19,6 +19,8 @@ import { FaClipboardList } from "react-icons/fa6";
 import { SiBloglovin } from "react-icons/si";
 import { TbLogin2 } from "react-icons/tb";
 import { IoMdNotifications } from "react-icons/io";
+import { Outlet } from 'react-router-dom';
+
 
 const { Header, Sider, Content } = Layout;
 
@@ -162,7 +164,10 @@ const MainLayout = () => {
         />
       </Sider>
       <Layout>
-        <Header style={{ padding: 0, background: colorBgContainer }}>
+        <Header 
+        className="d-flex justify-content-between ps-1 pe-5"
+        style=
+        {{ padding: 0, background: colorBgContainer }}>
           <Button
             type="text"
             icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
@@ -173,7 +178,26 @@ const MainLayout = () => {
               height: 64,
             }}
           />
+          <div className="d-flex gap-3 align-items-center">
+            <div className="position-relative">
+              <IoMdNotifications className='fs-4'/>
+              <span className="badge bg-warning rounded-circle p-1 position-absolute">3</span>
+            </div>
+            <div className="d-flex gap-3 align-items-center">
+              <div>
+                <img 
+                width={32}
+                height={32}
+                src="https://img.freepik.com/foto-gratis/efecto-humo-marco-neon-morado_53876-98142.jpg?t=st=1712677869~exp=1712681469~hmac=636b49d434151d41c7980e02fb1cc638de30c89a316942ee84e52d8eda175637&w=740"/>
+              </div>
+              <div>
+                <h5 className="mb-0">Proyecto de Grado</h5>
+                <p className="mb-0">Proyecto@gmail.com</p>
+              </div>
+            </div> 
+            </div>
         </Header>
+        <div></div>
         <Content
           style={{
             margin: '24px 16px',
@@ -183,7 +207,10 @@ const MainLayout = () => {
             borderRadius: borderRadiusLG,
           }}
         >
-          Content
+        
+        <Outlet/>
+        
+          
         </Content>
       </Layout>
     </Layout>
