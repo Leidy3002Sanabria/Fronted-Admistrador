@@ -19,7 +19,7 @@ const Dashboard = () => {
     style: {
       fill: ({ type }) => {
       
-        return "#524CC2";
+        return "#524CC1";
       },
     },
     label: {
