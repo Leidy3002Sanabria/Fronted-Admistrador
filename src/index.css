@@ -16,6 +16,10 @@ body{
   margin: 16px;
   background: rgb(255, 255, 255,0.3);
 }
+.color-button{
+  background-color: #6C63FF;
+  border-radius: 10px ;
+}
 .ant-Layout{
   min-height: 100vh;
 }
